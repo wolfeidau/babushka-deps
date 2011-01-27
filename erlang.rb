@@ -1,5 +1,6 @@
 dep 'erlang.src' do
   requires 'libssl headers.managed', 'ncurses.managed'
-  source 'http://www.erlang.org/download/otp_src_R14B01.tar.gz'
+  source 'git://github.com/erlang/otp.git'
+  preconfigure { shell 'git checkout OTP_R14B01' }
   provides 'erl', 'erlc'
 end
