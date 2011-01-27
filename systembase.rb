@@ -11,6 +11,8 @@ dep 'jnettop.managed' do
 end
 dep 'nmap.managed'
 dep 'screen.managed'
-dep 'sysstat.managed'
+dep 'sysstat.managed' do
+  provides 'vmstat', 'iostat'
+end
 dep 'tree.managed'
 dep 'vim.managed'
