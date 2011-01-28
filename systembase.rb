@@ -1,5 +1,5 @@
 dep 'systembase' do
-  requires 'vim.managed', 'curl.managed', 'htop.managed', 'jnettop.managed', 'screen.managed', 'sysstat.managed', 'nmap.managed', 'tree.managed'
+  requires 'vim.managed', 'curl.managed', 'htop.managed', 'jnettop.managed', 'screen.managed', 'sshd.managed', 'sysstat.managed', 'nmap.managed', 'tree.managed'
 end
 dep 'htop.managed'
 dep 'java.managed' do
@@ -11,6 +11,11 @@ dep 'jnettop.managed' do
 end
 dep 'nmap.managed'
 dep 'screen.managed'
+dep 'sshd.managed' do
+  installs {
+    via :apt, 'openssh-server'
+  }
+end
 dep 'sysstat.managed' do
   provides 'vmstat', 'iostat'
 end
