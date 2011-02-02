@@ -1,5 +1,5 @@
 dep 'riak.src' do
-    arch = `uname -p`.strip
+    arch = `uname -m`.strip
   
     source "http://downloads.basho.com/riak/riak-0.14/riak_0.14.0-1_#{arch}.deb"
     
