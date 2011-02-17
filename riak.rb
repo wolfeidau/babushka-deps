@@ -1,4 +1,4 @@
-dep 'riak' do
+dep 'riak.src' do
     arch = `uname -m`.strip
   
     if arch == "unknown" || arch =~ / /
