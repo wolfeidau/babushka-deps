@@ -35,3 +35,5 @@ Then to illustrate a simple source package I have created a dep which downloads 
 As I am currently messing around with the riak database, the following command will download and install the deb package for this software. Note this package includes another copy of the erlang runtime which in my view is fine for testing.
 
     $ babushka 'wolfeidau:riak' 
+
+More to come.
